@@ -30,7 +30,7 @@ body {
     width: 100%;
 }
 
-/* Encabezado */
+/* Banner */
 .header-banner {
     flex: 40%;
     display: flex;
@@ -140,16 +140,6 @@ ul {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* Botón de sortear título */
@@ -171,16 +161,3 @@ ul {
     background-color: var(--color-button-hover);
 }
 
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 32px;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-
-    .button-draw {
-        padding: 10px 20px;
-    }
-}
