@@ -6,13 +6,19 @@ function agregarAmigo() {
     let input = document.getElementById("amigo");
     let nombre = input.value;
 
-    if (nombre !== "") {
-        listaDeAmigos.push(nombre);
-        mostrarLista();
-        input.value = ""; // Limpiar el campo de texto
-    } else {
+    if (nombre === "") {
         alert("Por favor, ingresa un nombre.");
+        return;
     }
+
+    if (listaDeAmigos.includes(nombre)) {
+        alert("Este nombre ya está en la lista.");
+        return;
+    }
+
+    listaDeAmigos.push(nombre);
+    mostrarLista();
+    input.value = ""; // Limpiar el campo de texto
 }
 
 // Función para mostrar la lista de amigos
@@ -43,5 +49,5 @@ function sortearAmigo() {
 function limpiarLista() {
     listaDeAmigos = [];
     mostrarLista();
-    document.getElementById("resultado").textContent = ""; // Borrar el resultado
+    document.getElementById("resultado").textContent = "La lista ha sido limpiada."; // Mensaje de confirmación
 }
